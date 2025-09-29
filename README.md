@@ -12,10 +12,9 @@ It uses the [Polygon.io](https://polygon.io) API to fetch stock data such as tic
    ```
 
 2. Install dependencies:
-
-  ```bash
-  pip install -r requirements.txt
-  ```
+     ```bash
+     pip install -r requirements.txt
+     ```
 
 3. Add your Polygon API key as an environment variable:
    ```bash
