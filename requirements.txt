@@ -2,4 +2,4 @@ requests
 openai
 dotenv
 schedule
-
+snowflake-connector-python
