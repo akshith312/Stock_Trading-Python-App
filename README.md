@@ -1,7 +1,14 @@
-# Stock Trading Python App
+# Stock Trading Python App — REST API ETL to Snowflake
 
-This is a simple project I created while learning Python.  
-It uses the [Polygon.io](https://polygon.io) API to fetch stock data such as tickers and prices.
+This is a simple project I created while learning about Data Engineering.
+
+A lightweight Python app that demonstrates extracting market data from the Polygon.io REST API, normalizing JSON responses, and loading results into Snowflake for downstream analysis. Built as a learning project to practice API integration, data transformation, and incremental loading patterns — scheduled to run automatically on Windows using Task Scheduler. It uses the [Polygon.io](https://polygon.io) API to fetch stock data such as tickers and prices.
+
+Key features
+- Authenticated Polygon.io API connector with pagination and basic rate-limit handling
+- JSON flattening and simple type/timestamp normalization
+- Bulk load / upsert into Snowflake tables
+- Runnable locally via a .env file and automatable with Windows Task Scheduler
 
 ## Setup
 
@@ -32,7 +39,15 @@ It uses the [Polygon.io](https://polygon.io) API to fetch stock data such as tic
          SNOWFLAKE_SCHEMA = 
          SNOWFLAKE_ROLE = 
       ```
-5. Run the main script:
+5. Run the main script (Manual Extraction):
      ```bash
      python script.py
      ```
+6. Schedule Task through Windows Task Scheduler:
+   ```bash
+   a) Create a task with appropriate name
+   b) Set a trigger by creating a new trigger
+   c) Choose Begin the task option (On a schedule/On Start Up etc.)
+   d) Create a New Action -> Select Start a New Program -> Set your Python.exe path -> Add script.py path in the arguments field.
+   e) Optionally Set Conditions/ Change Settings.
+   ```
