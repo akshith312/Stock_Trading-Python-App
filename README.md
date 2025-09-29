@@ -18,13 +18,22 @@ It uses the [Polygon.io](https://polygon.io) API to fetch stock data such as tic
   ```
 
 3. Add your Polygon API key as an environment variable:
-```bash
-  export POLYGON_API_KEY=your_api_key   # macOS/Linux
-  set POLYGON_API_KEY=your_api_key      # Windows
-```
+   ```bash
+     export POLYGON_API_KEY=your_api_key   # macOS/Linux
+     set POLYGON_API_KEY=your_api_key      # Windows
+   ```
 
-
-4. Run the main script:
-  ```bash
-  python script.py
-  ```
+4. Add your Snowflake Credentials as environment variables:
+      ```bash
+         SNOWFLAKE_USER = 
+         SNOWFLAKE_PASSWORD = 
+         SNOWFLAKE_ACCOUNT = 
+         SNOWFLAKE_WAREHOUSE = 
+         SNOWFLAKE_DATABASE = 
+         SNOWFLAKE_SCHEMA = 
+         SNOWFLAKE_ROLE = 
+      ```
+5. Run the main script:
+     ```bash
+     python script.py
+     ```
